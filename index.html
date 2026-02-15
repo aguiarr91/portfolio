@@ -11,20 +11,27 @@
 </head>
 <body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans transition-colors duration-300">
 
-    <nav class="p-6 flex justify-between items-center max-w-5xl mx-auto">
+    <nav class="p-6 max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
         <h1 class="font-bold tracking-tight">RAFAEL M. AGUIAR</h1>
-        <div class="flex items-center space-x-6">
-            <a href="https://linkedin.com/in/rafael-m-aquiar" target="_blank" title="LinkedIn" class="opacity-80 hover:opacity-100 transition ml-2">
-    <svg class="w-5 h-5 fill-current inline" viewBox="0 0 24 24">
-        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-    </svg>
-</a>
-            <div class="flex space-x-3 text-xl">
-                <button onclick="setLanguage('en')" title="English" class="hover:scale-110 transition">🇺🇸</button>
-                <button onclick="setLanguage('pt')" title="Português" class="hover:scale-110 transition">🇧🇷</button>
-                <button onclick="setLanguage('es')" title="Español" class="hover:scale-110 transition">🇪🇸</button>
+
+        <div class="flex items-center space-x-8">
+            
+            <div class="flex items-center space-x-3 border-r border-gray-200 dark:border-gray-800 pr-6">
+                <div class="flex space-x-2 text-lg">
+                    <button onclick="setLanguage('en')" title="English" class="hover:scale-110 transition">🇺🇸</button>
+                    <button onclick="setLanguage('pt')" title="Português" class="hover:scale-110 transition">🇧🇷</button>
+                    <button onclick="setLanguage('es')" title="Español" class="hover:scale-110 transition">🇪🇸</button>
+                </div>
+                <button id="themeToggle" title="Toggle Theme" class="text-lg opacity-70 hover:opacity-100 ml-2">🌓</button>
             </div>
-            <button id="themeToggle" class="text-lg opacity-80 hover:opacity-100">🌓</button>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://linkedin.com/in/rafael-m-aquiar" target="_blank" class="text-sm font-medium hover:text-blue-500 transition flex items-center">
+                    <svg class="w-5 h-5 fill-current mr-1" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </a>
+                <a href="mailto:aguiar.rafaelm@gmail.com" class="text-sm font-medium hover:text-blue-500 transition">Email</a>
+            </div>
         </div>
     </nav>
 
@@ -34,7 +41,7 @@
             Supervisor at Samsung Brazil with 8 years of experience at IBM Brazil. 
             Focused on data analysis, Tableau dashboards, and process automation.
         </p>
-        <div class="mt-6 flex flex-wrap gap-2">
+        <div class="mt-6 flex flex-wrap gap-2 text-[cite: 7, 9, 20]">
             <span class="border border-gray-200 dark:border-gray-800 px-3 py-1 rounded text-xs">Tableau</span>
             <span class="border border-gray-200 dark:border-gray-800 px-3 py-1 rounded text-xs">ETL</span>
             <span class="border border-gray-200 dark:border-gray-800 px-3 py-1 rounded text-xs">TOEIC 980</span>
@@ -43,47 +50,47 @@
 
     <section class="max-w-5xl mx-auto py-10 px-6">
         <h3 id="expTitle" class="text-xs font-bold mb-8 uppercase tracking-[0.2em] text-gray-400">Experience</h3>
-        <div class="space-y-12">
+        <div class="space-y-12 text-[cite: 17, 18, 19, 26, 27]">
             <div>
                 <span class="text-xs font-mono text-blue-500">2021 — PRESENT</span>
-                <h4 class="text-lg font-bold text-gray-900 dark:text-white">Samsung Brazil</h4>
-                <p id="samsungDesc" class="text-gray-600 dark:text-gray-400 mt-2">BI Supervisor leading a team of 5. Responsible for dashboards and ETL flows.</p>
+                <h4 class="text-lg font-bold">Samsung Brazil</h4>
+                <p id="samsungDesc" class="text-gray-600 dark:text-gray-400 mt-2">BI Supervisor leading a team of 5. Responsible for dashboards and ETL flows. [cite: 15, 19, 20]</p>
             </div>
             <div>
                 <span class="text-xs font-mono text-gray-400">2012 — 2020</span>
-                <h4 class="text-lg font-bold text-gray-900 dark:text-white">IBM Brazil</h4>
-                <p id="ibmDesc" class="text-gray-600 dark:text-gray-400 mt-2">Specialist in Service Planning and Parts Planning for Latin America.</p>
+                <h4 class="text-lg font-bold">IBM Brazil</h4>
+                <p id="ibmDesc" class="text-gray-600 dark:text-gray-400 mt-2">Specialist in Service Planning and Parts Planning for Latin America. [cite: 28, 30]</p>
             </div>
         </div>
     </section>
 
     <footer class="max-w-5xl mx-auto py-20 px-6 text-sm text-gray-500 border-t border-gray-100 dark:border-gray-900 mt-10">
-        <p>aguiar.rafaelm@gmail.com</p>
-        <p class="mt-1">São Paulo, Brazil</p>
+        <p>aguiar.rafaelm@gmail.com [cite: 4]</p>
+        <p class="mt-1">São Paulo, Brazil [cite: 2]</p>
     </footer>
 
     <script>
         const translations = {
             en: {
                 role: "Business Intelligence Specialist",
-                desc: "Supervisor at Samsung Brazil with 8 years of experience at IBM Brazil. Focused on data analysis, Tableau dashboards, and process automation.",
+                desc: "Supervisor at Samsung Brazil with 8 years of experience at IBM Brazil. Focused on data analysis, Tableau dashboards, and process automation. [cite: 7, 9]",
                 exp: "Experience",
-                samsung: "BI Supervisor leading a team of 5. Responsible for dashboards and ETL flows.",
-                ibm: "Specialist in Service Planning and Parts Planning for Latin America."
+                samsung: "BI Supervisor leading a team of 5. Responsible for dashboards and ETL flows. [cite: 15, 19, 20]",
+                ibm: "Specialist in Service Planning and Parts Planning for Latin America. [cite: 28, 30]"
             },
             pt: {
                 role: "Especialista em Business Intelligence",
-                desc: "Supervisor na Samsung Brasil com 8 anos de experiência na IBM Brasil. Foco em análise de dados, dashboards em Tableau e automação de processos.",
+                desc: "Supervisor na Samsung Brasil com 8 anos de experiência na IBM Brasil. Foco em análise de dados, dashboards em Tableau e automação de processos. [cite: 7, 9]",
                 exp: "Experiência",
-                samsung: "Supervisor de BI liderando equipe de 5 pessoas. Responsável por dashboards e fluxos de ETL.",
-                ibm: "Especialista em Planejamento de Serviços e Peças para América Latina."
+                samsung: "Supervisor de BI liderando equipe de 5 pessoas. Responsável por dashboards e fluxos de ETL. [cite: 15, 19, 20]",
+                ibm: "Especialista em Planejamento de Serviços e Peças para América Latina. [cite: 28, 30]"
             },
             es: {
                 role: "Especialista en Business Intelligence",
-                desc: "Supervisor en Samsung Brasil con 8 años de experiencia en IBM Brasil. Enfocado en análisis de datos, dashboards en Tableau y automatización de procesos.",
+                desc: "Supervisor en Samsung Brasil con 8 años de experiencia en IBM Brasil. Enfocado en análisis de datos, dashboards en Tableau y automatización de procesos. [cite: 7, 9]",
                 exp: "Experiencia",
-                samsung: "Supervisor de BI liderando un equipo de 5. Responsable de dashboards y flujos de ETL.",
-                ibm: "Especialista en Planificación de Servicios y Piezas para América Latina."
+                samsung: "Supervisor de BI liderando un equipo de 5. Responsable de dashboards y flujos de ETL. [cite: 15, 19, 20]",
+                ibm: "Especialista en Planificación de Servicios y Piezas para América Latina. [cite: 28, 30]"
             }
         };
 
