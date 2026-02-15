@@ -41,14 +41,14 @@
             Focused on data analysis, Tableau dashboards, and process automation.
         </p>
         <div class="mt-6 flex flex-wrap gap-2">
-            <span class="border border-gray-200 dark:border-gray-800 px-3 py-1 rounded text-xs">Tableau</span>
-            <span class="border border-gray-200 dark:border-gray-800 px-3 py-1 rounded text-xs">ETL</span>
-            <span class="border border-gray-200 dark:border-gray-800 px-3 py-1 rounded text-xs">TOEIC 980</span>
+            <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 px-3 py-1 rounded text-xs font-semibold">Tableau</span>
+            <span class="bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400 px-3 py-1 rounded text-xs font-semibold">ETL</span>
+            <span class="bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 px-3 py-1 rounded text-xs font-semibold">TOEIC 980</span>
         </div>
     </header>
 
     <section class="max-w-5xl mx-auto py-10 px-6">
-        <h3 id="expTitle" class="text-xs font-bold mb-8 uppercase tracking-[0.2em] text-gray-400">Experience</h3>
+        <h3 id="expTitle" class="text-xs font-bold mb-8 uppercase tracking-[0.2em] text-gray-400 border-b border-gray-100 dark:border-gray-900 pb-2">Experience</h3>
         <div class="space-y-12">
             <div>
                 <span class="text-xs font-mono text-blue-500 uppercase">2021 — Present</span>
@@ -59,6 +59,22 @@
                 <span class="text-xs font-mono text-gray-400 uppercase">2012 — 2020</span>
                 <h4 class="text-lg font-bold text-gray-700 dark:text-gray-300">IBM Brazil</h4>
                 <p id="ibmDesc" class="text-gray-600 dark:text-gray-400 mt-2">Specialist in Service Planning and Parts Planning for Latin America.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="max-w-5xl mx-auto py-10 px-6">
+        <h3 id="projTitle" class="text-xs font-bold mb-8 uppercase tracking-[0.2em] text-gray-400 border-b border-gray-100 dark:border-gray-900 pb-2">Key Projects</h3>
+        <div class="grid md:grid-cols-1 gap-8">
+            <div class="bg-gray-50 dark:bg-gray-900/30 p-6 rounded-lg border border-gray-100 dark:border-gray-800 hover:border-blue-500/50 transition">
+                <h4 id="proj1Title" class="text-lg font-bold text-blue-500">Sales Channel Performance Dashboard</h4>
+                <p id="proj1Desc" class="text-sm text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">
+                    Automated extraction and categorization of daily sales data across multiple channels. Built an end-to-end solution to track revenue, volume, and trends.
+                </p>
+                <div class="mt-4 flex gap-2">
+                    <span class="text-[10px] px-2 py-0.5 rounded bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 font-bold">TABLEAU</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 font-bold">ETL</span>
+                </div>
             </div>
         </div>
     </section>
@@ -75,21 +91,30 @@
                 desc: "Supervisor at Samsung Brazil with 8 years of experience at IBM Brazil. Focused on data analysis, Tableau dashboards, and process automation.",
                 exp: "Experience",
                 samsung: "BI Supervisor leading a team of 5. Responsible for dashboards and ETL flows.",
-                ibm: "Specialist in Service Planning and Parts Planning for Latin America."
+                ibm: "Specialist in Service Planning and Parts Planning for Latin America.",
+                proj: "Key Projects",
+                proj1T: "Sales Channel Performance Dashboard",
+                proj1D: "Automated extraction and categorization of daily sales data across multiple channels. Built an end-to-end solution to track revenue, volume, and trends."
             },
             pt: {
                 role: "Especialista em Business Intelligence",
                 desc: "Supervisor na Samsung Brasil com 8 anos de experiência na IBM Brasil. Foco em análise de dados, dashboards em Tableau e automação de processos.",
                 exp: "Experiência",
                 samsung: "Supervisor de BI liderando equipe de 5 pessoas. Responsável por dashboards e fluxos de ETL.",
-                ibm: "Especialista em Planejamento de Serviços e Peças para América Latina."
+                ibm: "Especialista em Planejamento de Serviços e Peças para América Latina.",
+                proj: "Projetos Chave",
+                proj1T: "Dashboard de Performance por Canal de Vendas",
+                proj1D: "Extração automatizada e categorização diária de vendas por múltiplos canais. Solução ponta-a-ponta para monitoramento de receita, volume e tendências."
             },
             es: {
                 role: "Especialista en Business Intelligence",
                 desc: "Supervisor en Samsung Brasil con 8 años de experiencia en IBM Brasil. Enfocado en análisis de datos, dashboards en Tableau y automatización de procesos.",
                 exp: "Experiencia",
                 samsung: "Supervisor de BI liderando un equipo de 5. Responsable de dashboards y flujos de ETL.",
-                ibm: "Especialista en Planificación de Servicios y Piezas para América Latina."
+                ibm: "Especialista en Planificación de Servicios y Piezas para América Latina.",
+                proj: "Proyectos Clave",
+                proj1T: "Dashboard de Rendimiento por Canal de Ventas",
+                proj1D: "Extracción automatizada y categorización diaria de ventas por múltiples canales. Solución integral para el seguimiento de ingresos, volumen y tendencias."
             }
         };
 
@@ -99,6 +124,9 @@
             document.getElementById('expTitle').innerText = translations[lang].exp;
             document.getElementById('samsungDesc').innerText = translations[lang].samsung;
             document.getElementById('ibmDesc').innerText = translations[lang].ibm;
+            document.getElementById('projTitle').innerText = translations[lang].proj;
+            document.getElementById('proj1Title').innerText = translations[lang].proj1T;
+            document.getElementById('proj1Desc').innerText = translations[lang].proj1D;
         }
 
         document.getElementById('themeToggle').addEventListener('click', () => {
