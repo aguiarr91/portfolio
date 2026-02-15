@@ -87,6 +87,28 @@
         </div>
     </section>
 
+    <section id="education" class="max-w-5xl mx-auto py-10 px-6 border-t border-gray-100 dark:border-gray-900">
+        <h3 id="eduTitle" class="text-xs font-bold mb-8 uppercase tracking-[0.2em] text-gray-400 border-b border-gray-100 dark:border-gray-900 pb-2">Education</h3>
+        <div class="space-y-8">
+            <div>
+                <span id="eduStatus1" class="text-[10px] font-bold text-blue-500 uppercase tracking-widest">In Progress — Expected 2025</span>
+                <h4 class="text-lg font-bold">B.S. in Business Management</h4>
+                <p class="text-gray-600 dark:text-gray-400">FATEC Tatuapé</p>
+            </div>
+            <div>
+                <span id="eduStatus2" class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Technical Foundation</span>
+                <h4 class="text-lg font-bold">Analysis and Systems Development</h4>
+                <p class="text-gray-600 dark:text-gray-400">Fatec São Paulo (2010 - 2013)</p>
+            </div>
+            <div>
+                <span id="eduStatus3" class="text-[10px] font-bold text-emerald-500 uppercase tracking-widest">Completed</span>
+                <h4 class="text-lg font-bold">IT Technician</h4>
+                <p class="text-gray-600 dark:text-gray-400">ETESP (2010 - 2011)</p>
+            </div>
+        </div>
+    </section>
+    
+
     <footer class="max-w-5xl mx-auto py-20 px-6 text-sm text-gray-500 border-t border-gray-100 dark:border-gray-900 mt-10">
         <p>aguiar.rafaelm@gmail.com</p>
         <p class="mt-1">São Paulo, Brazil</p>
@@ -102,7 +124,11 @@
                 ibm: "Specialist in Service Planning and Parts Planning for Latin America.",
                 proj: "Key Projects",
                 proj1T: "Sales Channel Performance Dashboard",
-                proj1D: "Automated extraction and categorization of daily sales data across multiple channels. Built an end-to-end solution to track revenue, volume, and trends."
+                proj1D: "Automated extraction and categorization of daily sales data across multiple channels. Built an end-to-end solution to track revenue, volume, and trends.",
+                edu: "Education",
+                eduS1: "In Progress — Expected 2025",
+                eduS2: "Technical Foundation",
+                eduS3: "Completed"
             },
             pt: {
                 role: "Business Intelligence Lead",
@@ -112,7 +138,11 @@
                 ibm: "Especialista em Planejamento de Serviços e Peças para América Latina.",
                 proj: "Projetos Chave",
                 proj1T: "Dashboard de Performance por Canal de Vendas",
-                proj1D: "Extração automatizada e categorização diária de vendas por múltiplos canais. Solução ponta-a-ponta para monitoramento de receita, volume e tendências."
+                proj1D: "Extração automatizada e categorização diária de vendas por múltiplos canais. Solução ponta-a-ponta para monitoramento de receita, volume e tendências.",
+                edu: "Formação Acadêmica",
+                eduS1: "Em Andamento — Conclusão 2025",
+                eduS2: "Base Técnica",
+                eduS3: "Concluído"
             },
             es: {
                 role: "Business Intelligence Lead",
@@ -122,7 +152,11 @@
                 ibm: "Especialista en Planificación de Servicios y Piezas para América Latina.",
                 proj: "Proyectos Clave",
                 proj1T: "Dashboard de Rendimiento por Canal de Ventas",
-                proj1D: "Extracción automatizada y categorización diaria de ventas por múltiples canales. Solución integral para el seguimiento de ingresos, volumen y tendencias."
+                proj1D: "Extracción automatizada y categorización diaria de ventas por múltiples canales. Solución integral para el seguimiento de ingresos, volumen y tendencias.",
+                edu: "Educación",
+                eduS1: "En Curso — Finalización 2025",
+                eduS2: "Base Técnica",
+                eduS3: "Completado"
             }
         };
 
@@ -135,6 +169,10 @@
             document.getElementById('projTitle').innerText = translations[lang].proj;
             document.getElementById('proj1Title').innerText = translations[lang].proj1T;
             document.getElementById('proj1Desc').innerText = translations[lang].proj1D;
+            document.getElementById('eduTitle').innerText = translations[lang].edu;
+            document.getElementById('eduStatus1').innerText = translations[lang].eduS1;
+            document.getElementById('eduStatus2').innerText = translations[lang].eduS2;
+            document.getElementById('eduStatus3').innerText = translations[lang].eduS3;
         }
 
         document.getElementById('themeToggle').addEventListener('click', () => {
