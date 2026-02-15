@@ -1,94 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafael M. Aguiar | BI Lead & Data Strategy</title>
+    <title>Rafael M. Aguiar | BI Lead</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
 
-    <nav class="p-6 bg-white shadow-sm flex justify-between items-center sticky top-0 z-50">
+    <nav class="p-6 bg-white dark:bg-gray-800 shadow-sm flex justify-between items-center sticky top-0 z-50">
         <h1 class="text-xl font-bold tracking-tight uppercase">Rafael <span class="text-blue-600">Aguiar</span></h1>
-        <div class="hidden md:flex space-x-8 text-sm font-medium">
-            <a href="#about" class="hover:text-blue-600 transition">About</a>
-            <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
-            <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
-            <a href="mailto:aguiar.rafaelm@gmail.com" class="text-blue-600 border border-blue-600 px-4 py-2 rounded hover:bg-blue-50 transition">Contact</a>
+        
+        <div class="flex items-center space-x-4">
+            <select id="langSwitcher" class="bg-transparent border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm outline-none">
+                <option value="en">EN</option>
+                <option value="pt">PT</option>
+                <option value="es">ES</option>
+            </select>
+
+            <button id="themeToggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition">
+                <span id="themeIcon">🌙</span>
+            </button>
         </div>
     </nav>
 
-    <header id="about" class="max-w-5xl mx-auto py-24 px-6">
-        <div class="md:flex items-center gap-12">
-            <div class="flex-1">
-                <span class="text-blue-600 font-semibold tracking-widest uppercase text-sm">Business Intelligence Specialist</span>
-                <h2 class="text-5xl font-extrabold mt-2 mb-6 leading-tight">Driving Decisions Through <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">Data Strategy.</span></h2>
-                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                    Over 12 years of experience in global tech giants. Currently supervising a BI team at <strong>Samsung Brazil</strong>, 
-                    leveraging 8 years of corporate foundation from <strong>IBM</strong> to build scalable data solutions.
-                </p>
-                <div class="flex flex-wrap gap-3">
-                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold uppercase">TOEIC 980 (C1)</span>
-                    <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-bold uppercase">Tableau Pro</span>
-                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold uppercase">Team Lead</span>
-                </div>
-            </div>
+    <header class="max-w-5xl mx-auto py-24 px-6">
+        <span id="roleLabel" class="text-blue-600 font-semibold tracking-widest uppercase text-sm italic">Business Intelligence Specialist</span>
+        <h2 id="heroTitle" class="text-5xl font-extrabold mt-2 mb-6 leading-tight">Driving Decisions Through <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">Data Strategy.</span></h2>
+        <p id="heroDesc" class="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-3xl">
+            Over 12 years of experience in tech giants. Currently supervising a BI team at Samsung Brazil, leveraging 8 years of corporate foundation from IBM.
+        </p>
+        <div class="flex flex-wrap gap-3">
+            <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 px-3 py-1 rounded-full text-xs font-bold uppercase">TOEIC 980 (C1)</span>
+            <span class="bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400 px-3 py-1 rounded-full text-xs font-bold uppercase">Tableau Pro</span>
         </div>
     </header>
 
-    <section id="skills" class="bg-white py-20 border-y border-gray-100">
-        <div class="max-w-5xl mx-auto px-6">
-            <h3 class="text-2xl font-bold mb-12 text-center">Technical Expertise</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="text-3xl mb-2">📊</div>
-                    <h4 class="font-bold">Data Viz</h4>
-                    <p class="text-sm text-gray-500">Tableau, Power BI, Dashboard Design</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl mb-2">⚙️</div>
-                    <h4 class="font-bold">Data Eng</h4>
-                    <p class="text-sm text-gray-500">ETL, SQL, Tableau Prep, Python</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl mb-2">🚀</div>
-                    <h4 class="font-bold">Dev & Ops</h4>
-                    <p class="text-sm text-gray-500">Git, Docker, Node.js, React</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl mb-2">🤝</div>
-                    <h4 class="font-bold">Leadership</h4>
-                    <p class="text-sm text-gray-500">Agile, Lean Six Sigma, Team Management</p>
-                </div>
+    <section class="max-w-5xl mx-auto py-12 px-6 border-t border-gray-200 dark:border-gray-700">
+        <h3 id="expTitle" class="text-2xl font-bold mb-8">Experience</h3>
+        <div class="space-y-8">
+            <div class="border-l-2 border-blue-600 pl-6">
+                <h4 class="font-bold text-xl">Samsung Brazil</h4>
+                <p id="samsungRole" class="text-sm text-gray-500">BI Supervisor (2021-Present)</p>
+            </div>
+            <div class="border-l-2 border-gray-300 pl-6">
+                <h4 class="font-bold text-xl text-gray-700 dark:text-gray-300">IBM Brazil</h4>
+                <p id="ibmRole" class="text-sm text-gray-500">Service Planning Specialist (2012-2020)</p>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="max-w-5xl mx-auto py-20 px-6">
-        <h3 class="text-2xl font-bold mb-12">Professional Experience</h3>
-        <div class="space-y-12">
-            <div class="relative pl-8 border-l-2 border-blue-600">
-                <div class="absolute w-4 h-4 bg-blue-600 rounded-full -left-[9px] top-1"></div>
-                <span class="text-sm font-bold text-blue-600">2021 — PRESENT</span>
-                <h4 class="text-xl font-bold">BI Supervisor | Samsung Brazil</h4>
-                <p class="text-gray-600 mt-2">Leading a team of 5 specialists in creating high-impact dashboards and ETL automation[cite: 15, 21]. Acting as a strategic advisor for data-driven business units[cite: 24].</p>
-            </div>
-            <div class="relative pl-8 border-l-2 border-gray-200">
-                <div class="absolute w-4 h-4 bg-gray-200 rounded-full -left-[9px] top-1"></div>
-                <span class="text-sm font-bold text-gray-400">2012 — 2020</span>
-                <h4 class="text-xl font-bold text-gray-700">Service & Parts Planning Specialist | IBM Brazil</h4>
-                <p class="text-gray-600 mt-2">Regional performance analysis for Latin America. Developed feasibility studies and cost projections for complex service operations[cite: 34].</p>
-            </div>
-        </div>
-    </section>
+    <script>
+        const translations = {
+            en: {
+                role: "Business Intelligence Specialist",
+                title: "Driving Decisions Through Data Strategy.",
+                desc: "Over 12 years of experience in tech giants. Currently supervising a BI team at Samsung Brazil, leveraging 8 years of corporate foundation from IBM.",
+                exp: "Experience",
+                samsung: "BI Supervisor (2021-Present)",
+                ibm: "Service Planning Specialist (2012-2020)"
+            },
+            pt: {
+                role: "Especialista em Business Intelligence",
+                title: "Decisões Inteligentes Através da Estratégia de Dados.",
+                desc: "Mais de 12 anos de experiência em gigantes da tecnologia. Atualmente supervisiono uma equipe de BI na Samsung Brasil, com base em 8 anos de experiência na IBM.",
+                exp: "Experiência",
+                samsung: "Supervisor de BI (2021-Atual)",
+                ibm: "Especialista de Planejamento (2012-2020)"
+            },
+            es: {
+                role: "Especialista en Business Intelligence",
+                title: "Decisiones Inteligentes a través de la Estrategia de Datos.",
+                desc: "Más de 12 años de experiencia en gigantes tecnológicos. Supervisando un equipo de BI en Samsung Brasil, con 8 años de trayectoria en IBM.",
+                exp: "Experiencia",
+                samsung: "Supervisor de BI (2021-Presente)",
+                ibm: "Especialista en Planificación (2012-2020)"
+            }
+        };
 
-    <footer class="bg-gray-900 text-white py-12 px-6 text-center">
-        <p class="text-gray-400 mb-4">Ready to transform your data into strategy?</p>
-        <a href="mailto:aguiar.rafaelm@gmail.com" class="text-xl font-bold border-b-2 border-blue-500 hover:text-blue-400 transition">aguiar.rafaelm@gmail.com</a>
-        <div class="mt-8 text-xs text-gray-600">
-            &copy; 2026 Rafael M. Aguiar. Built with HTML/Tailwind.
-        </div>
-    </footer>
+        // Theme Toggle Logic
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            themeIcon.innerText = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+        });
 
+        // Language Switcher Logic
+        const langSwitcher = document.getElementById('langSwitcher');
+        langSwitcher.addEventListener('change', (e) => {
+            const lang = e.target.value;
+            document.getElementById('roleLabel').innerText = translations[lang].role;
+            document.getElementById('heroTitle').innerHTML = translations[lang].title.replace("Data Strategy", "<span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500'>Data Strategy</span>");
+            document.getElementById('heroDesc').innerText = translations[lang].desc;
+            document.getElementById('expTitle').innerText = translations[lang].exp;
+            document.getElementById('samsungRole').innerText = translations[lang].samsung;
+            document.getElementById('ibmRole').innerText = translations[lang].ibm;
+        });
+    </script>
 </body>
 </html>
