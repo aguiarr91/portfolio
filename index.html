@@ -1,106 +1,97 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafael M. Aguiar | BI Lead</title>
+    <title>Rafael M. Aguiar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            darkMode: 'class',
-        }
+        tailwind.config = { darkMode: 'class' }
     </script>
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
 
-    <nav class="p-6 bg-white dark:bg-gray-800 shadow-sm flex justify-between items-center sticky top-0 z-50">
-        <h1 class="text-xl font-bold tracking-tight uppercase">Rafael <span class="text-blue-600">Aguiar</span></h1>
-        
+    <nav class="p-6 flex justify-between items-center max-w-5xl mx-auto">
+        <h1 class="font-bold tracking-tight">RAFAEL M. AGUIAR</h1>
         <div class="flex items-center space-x-4">
-            <select id="langSwitcher" class="bg-transparent border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm outline-none">
+            <select id="langSwitcher" class="bg-transparent border border-gray-300 dark:border-gray-700 rounded px-1 py-1 text-xs outline-none cursor-pointer">
                 <option value="en">EN</option>
                 <option value="pt">PT</option>
                 <option value="es">ES</option>
             </select>
-
-            <button id="themeToggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition">
-                <span id="themeIcon">🌙</span>
-            </button>
+            <button id="themeToggle" class="text-sm grayscale hover:grayscale-0">🌓</button>
         </div>
     </nav>
 
-    <header class="max-w-5xl mx-auto py-24 px-6">
-        <span id="roleLabel" class="text-blue-600 font-semibold tracking-widest uppercase text-sm italic">Business Intelligence Specialist</span>
-        <h2 id="heroTitle" class="text-5xl font-extrabold mt-2 mb-6 leading-tight">Driving Decisions Through <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">Data Strategy.</span></h2>
-        <p id="heroDesc" class="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-3xl">
-            Over 12 years of experience in tech giants. Currently supervising a BI team at Samsung Brazil, leveraging 8 years of corporate foundation from IBM.
+    <header class="max-w-5xl mx-auto py-16 px-6">
+        <h2 id="roleLabel" class="text-blue-600 font-medium text-sm mb-2">Business Intelligence Specialist</h2>
+        <p id="heroDesc" class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
+            Supervisor at Samsung Brazil with 8 years of experience at IBM Brazil. 
+            Focused on data analysis, Tableau dashboards, and process automation.
         </p>
-        <div class="flex flex-wrap gap-3">
-            <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 px-3 py-1 rounded-full text-xs font-bold uppercase">TOEIC 980 (C1)</span>
-            <span class="bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400 px-3 py-1 rounded-full text-xs font-bold uppercase">Tableau Pro</span>
+        <div class="mt-6 flex flex-wrap gap-2">
+            <span class="border border-gray-300 dark:border-gray-700 px-3 py-1 rounded text-xs">Tableau</span>
+            <span class="border border-gray-300 dark:border-gray-700 px-3 py-1 rounded text-xs">ETL</span>
+            <span class="border border-gray-300 dark:border-gray-700 px-3 py-1 rounded text-xs">TOEIC 980</span>
         </div>
     </header>
 
-    <section class="max-w-5xl mx-auto py-12 px-6 border-t border-gray-200 dark:border-gray-700">
-        <h3 id="expTitle" class="text-2xl font-bold mb-8">Experience</h3>
-        <div class="space-y-8">
-            <div class="border-l-2 border-blue-600 pl-6">
-                <h4 class="font-bold text-xl">Samsung Brazil</h4>
-                <p id="samsungRole" class="text-sm text-gray-500">BI Supervisor (2021-Present)</p>
+    <section class="max-w-5xl mx-auto py-10 px-6">
+        <h3 id="expTitle" class="text-lg font-bold mb-6 uppercase tracking-wider">Experience</h3>
+        <div class="space-y-10">
+            <div>
+                <span class="text-xs font-mono text-blue-600">2021 — PRESENT</span>
+                <h4 class="text-lg font-bold">Samsung Brazil (via Gi Group)</h4>
+                <p id="samsungDesc" class="text-gray-600 dark:text-gray-400 mt-1">BI Supervisor leading a team of 5. Responsible for dashboards and ETL flows.</p>
             </div>
-            <div class="border-l-2 border-gray-300 pl-6">
-                <h4 class="font-bold text-xl text-gray-700 dark:text-gray-300">IBM Brazil</h4>
-                <p id="ibmRole" class="text-sm text-gray-500">Service Planning Specialist (2012-2020)</p>
+            <div>
+                <span class="text-xs font-mono text-gray-400">2012 — 2020</span>
+                <h4 class="text-lg font-bold">IBM Brazil</h4>
+                <p id="ibmDesc" class="text-gray-600 dark:text-gray-400 mt-1">Specialist in Service Planning and Parts Planning for Latin America.</p>
             </div>
         </div>
     </section>
+
+    <footer class="max-w-5xl mx-auto py-20 px-6 text-sm text-gray-500 border-t border-gray-200 dark:border-gray-800">
+        <p>aguiar.rafaelm@gmail.com</p>
+    </footer>
 
     <script>
         const translations = {
             en: {
                 role: "Business Intelligence Specialist",
-                title: "Driving Decisions Through Data Strategy.",
-                desc: "Over 12 years of experience in tech giants. Currently supervising a BI team at Samsung Brazil, leveraging 8 years of corporate foundation from IBM.",
+                desc: "Supervisor at Samsung Brazil with 8 years of experience at IBM Brazil. Focused on data analysis, Tableau dashboards, and process automation.",
                 exp: "Experience",
-                samsung: "BI Supervisor (2021-Present)",
-                ibm: "Service Planning Specialist (2012-2020)"
+                samsung: "BI Supervisor leading a team of 5. Responsible for dashboards and ETL flows.",
+                ibm: "Specialist in Service Planning and Parts Planning for Latin America."
             },
             pt: {
                 role: "Especialista em Business Intelligence",
-                title: "Decisões Inteligentes Através da Estratégia de Dados.",
-                desc: "Mais de 12 anos de experiência em gigantes da tecnologia. Atualmente supervisiono uma equipe de BI na Samsung Brasil, com base em 8 anos de experiência na IBM.",
+                desc: "Supervisor na Samsung Brasil com 8 anos de experiência na IBM Brasil. Foco em análise de dados, dashboards em Tableau e automação de processos.",
                 exp: "Experiência",
-                samsung: "Supervisor de BI (2021-Atual)",
-                ibm: "Especialista de Planejamento (2012-2020)"
+                samsung: "Supervisor de BI liderando equipe de 5 pessoas. Responsável por dashboards e fluxos de ETL.",
+                ibm: "Especialista em Planejamento de Serviços e Peças para América Latina."
             },
             es: {
                 role: "Especialista en Business Intelligence",
-                title: "Decisiones Inteligentes a través de la Estrategia de Datos.",
-                desc: "Más de 12 años de experiencia en gigantes tecnológicos. Supervisando un equipo de BI en Samsung Brasil, con 8 años de trayectoria en IBM.",
+                desc: "Supervisor en Samsung Brasil con 8 años de experiencia en IBM Brasil. Enfocado en análisis de datos, dashboards en Tableau y automatización de procesos.",
                 exp: "Experiencia",
-                samsung: "Supervisor de BI (2021-Presente)",
-                ibm: "Especialista en Planificación (2012-2020)"
+                samsung: "Supervisor de BI liderando un equipo de 5. Responsable de dashboards y flujos de ETL.",
+                ibm: "Especialista en Planificación de Servicios y Piezas para América Latina."
             }
         };
 
-        // Theme Toggle Logic
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-        themeToggle.addEventListener('click', () => {
+        document.getElementById('themeToggle').addEventListener('click', () => {
             document.documentElement.classList.toggle('dark');
-            themeIcon.innerText = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
         });
 
-        // Language Switcher Logic
-        const langSwitcher = document.getElementById('langSwitcher');
-        langSwitcher.addEventListener('change', (e) => {
+        document.getElementById('langSwitcher').addEventListener('change', (e) => {
             const lang = e.target.value;
             document.getElementById('roleLabel').innerText = translations[lang].role;
-            document.getElementById('heroTitle').innerHTML = translations[lang].title.replace("Data Strategy", "<span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500'>Data Strategy</span>");
             document.getElementById('heroDesc').innerText = translations[lang].desc;
             document.getElementById('expTitle').innerText = translations[lang].exp;
-            document.getElementById('samsungRole').innerText = translations[lang].samsung;
-            document.getElementById('ibmRole').innerText = translations[lang].ibm;
+            document.getElementById('samsungDesc').innerText = translations[lang].samsung;
+            document.getElementById('ibmDesc').innerText = translations[lang].ibm;
         });
     </script>
 </body>
