@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,51 +9,52 @@
         tailwind.config = { darkMode: 'class' }
     </script>
 </head>
-<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
+<body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans transition-colors duration-300">
 
     <nav class="p-6 flex justify-between items-center max-w-5xl mx-auto">
-        <h1 class="font-bold tracking-tight">RAFAEL M. AGUIAR</h1>
-        <div class="flex items-center space-x-4">
-            <select id="langSwitcher" class="bg-transparent border border-gray-300 dark:border-gray-700 rounded px-1 py-1 text-xs outline-none cursor-pointer">
-                <option value="en">EN</option>
-                <option value="pt">PT</option>
-                <option value="es">ES</option>
-            </select>
-            <button id="themeToggle" class="text-sm grayscale hover:grayscale-0">🌓</button>
+        <h1 class="font-bold tracking-tight">RAFAEL M. AGUIAR [cite: 1]</h1>
+        <div class="flex items-center space-x-6">
+            <div class="flex space-x-3 text-xl">
+                <button onclick="setLanguage('en')" title="English" class="hover:scale-110 transition">🇺🇸</button>
+                <button onclick="setLanguage('pt')" title="Português" class="hover:scale-110 transition">🇧🇷</button>
+                <button onclick="setLanguage('es')" title="Español" class="hover:scale-110 transition">🇪🇸</button>
+            </div>
+            <button id="themeToggle" class="text-lg opacity-80 hover:opacity-100">🌓</button>
         </div>
     </nav>
 
     <header class="max-w-5xl mx-auto py-16 px-6">
-        <h2 id="roleLabel" class="text-blue-600 font-medium text-sm mb-2">Business Intelligence Specialist</h2>
+        <h2 id="roleLabel" class="text-blue-500 font-medium text-sm mb-2 uppercase tracking-wide">Business Intelligence Specialist [cite: 7]</h2>
         <p id="heroDesc" class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
-            Supervisor at Samsung Brazil with 8 years of experience at IBM Brazil. 
-            Focused on data analysis, Tableau dashboards, and process automation.
+            Supervisor at Samsung Brazil [cite: 9, 18, 19] with 8 years of experience at IBM Brazil. 
+            Focused on data analysis, Tableau dashboards, and process automation[cite: 7, 10, 12].
         </p>
         <div class="mt-6 flex flex-wrap gap-2">
-            <span class="border border-gray-300 dark:border-gray-700 px-3 py-1 rounded text-xs">Tableau</span>
-            <span class="border border-gray-300 dark:border-gray-700 px-3 py-1 rounded text-xs">ETL</span>
-            <span class="border border-gray-300 dark:border-gray-700 px-3 py-1 rounded text-xs">TOEIC 980</span>
+            <span class="border border-gray-200 dark:border-gray-800 px-3 py-1 rounded text-xs">Tableau [cite: 10, 78]</span>
+            <span class="border border-gray-200 dark:border-gray-800 px-3 py-1 rounded text-xs">ETL [cite: 9, 78]</span>
+            <span class="border border-gray-200 dark:border-gray-800 px-3 py-1 rounded text-xs">TOEIC 980 [cite: 46]</span>
         </div>
     </header>
 
     <section class="max-w-5xl mx-auto py-10 px-6">
-        <h3 id="expTitle" class="text-lg font-bold mb-6 uppercase tracking-wider">Experience</h3>
-        <div class="space-y-10">
+        <h3 id="expTitle" class="text-xs font-bold mb-8 uppercase tracking-[0.2em] text-gray-400">Experience</h3>
+        <div class="space-y-12">
             <div>
-                <span class="text-xs font-mono text-blue-600">2021 — PRESENT</span>
-                <h4 class="text-lg font-bold">Samsung Brazil (via Gi Group)</h4>
-                <p id="samsungDesc" class="text-gray-600 dark:text-gray-400 mt-1">BI Supervisor leading a team of 5. Responsible for dashboards and ETL flows.</p>
+                <span class="text-xs font-mono text-blue-500">2021 — PRESENT [cite: 17]</span>
+                <h4 class="text-lg font-bold">Samsung Brazil (via Gi Group) [cite: 18]</h4>
+                <p id="samsungDesc" class="text-gray-600 dark:text-gray-400 mt-2">BI Supervisor leading a team of 5[cite: 15, 19, 25]. Responsible for dashboards and ETL flows[cite: 10, 20, 21].</p>
             </div>
             <div>
-                <span class="text-xs font-mono text-gray-400">2012 — 2020</span>
-                <h4 class="text-lg font-bold">IBM Brazil</h4>
-                <p id="ibmDesc" class="text-gray-600 dark:text-gray-400 mt-1">Specialist in Service Planning and Parts Planning for Latin America.</p>
+                <span class="text-xs font-mono text-gray-400">2012 — 2020 [cite: 26]</span>
+                <h4 class="text-lg font-bold">IBM Brazil [cite: 27]</h4>
+                <p id="ibmDesc" class="text-gray-600 dark:text-gray-400 mt-2">Specialist in Service Planning and Parts Planning for Latin America[cite: 28, 30, 31].</p>
             </div>
         </div>
     </section>
 
-    <footer class="max-w-5xl mx-auto py-20 px-6 text-sm text-gray-500 border-t border-gray-200 dark:border-gray-800">
-        <p>aguiar.rafaelm@gmail.com</p>
+    <footer class="max-w-5xl mx-auto py-20 px-6 text-sm text-gray-500 border-t border-gray-100 dark:border-gray-900 mt-10">
+        <p>aguiar.rafaelm@gmail.com [cite: 4]</p>
+        <p class="mt-1">São Paulo, Brazil [cite: 2]</p>
     </footer>
 
     <script>
@@ -81,17 +82,16 @@
             }
         };
 
-        document.getElementById('themeToggle').addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-        });
-
-        document.getElementById('langSwitcher').addEventListener('change', (e) => {
-            const lang = e.target.value;
+        function setLanguage(lang) {
             document.getElementById('roleLabel').innerText = translations[lang].role;
             document.getElementById('heroDesc').innerText = translations[lang].desc;
             document.getElementById('expTitle').innerText = translations[lang].exp;
             document.getElementById('samsungDesc').innerText = translations[lang].samsung;
             document.getElementById('ibmDesc').innerText = translations[lang].ibm;
+        }
+
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
         });
     </script>
 </body>
