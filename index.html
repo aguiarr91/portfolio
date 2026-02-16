@@ -7,6 +7,27 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = { darkMode: 'class' }
+
+        function showTab(tabId) {
+        // Esconder todos os conteúdos
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.add('hidden');
+        });
+        
+        // Resetar estilo dos botões
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('text-blue-500', 'border-b-2', 'border-blue-500');
+            btn.classList.add('text-gray-400');
+        });
+
+        // Mostrar a aba selecionada
+        document.getElementById('tab-' + tabId).classList.remove('hidden');
+        
+        // Destacar o botão clicado
+        const activeBtn = document.getElementById('btn-' + tabId);
+        activeBtn.classList.add('text-blue-500', 'border-b-2', 'border-blue-500');
+        activeBtn.classList.remove('text-gray-400');
+    }
     </script>
 </head>
 <body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans transition-colors duration-300">
@@ -143,33 +164,47 @@
     </section>
 
 
-    <section id="library" class="max-w-5xl mx-auto py-10 px-6 border-t border-gray-100 dark:border-gray-900">
+<section id="library" class="max-w-5xl mx-auto py-10 px-6 border-t border-gray-100 dark:border-gray-900">
         <h3 id="libTitle" class="text-xs font-bold mb-8 uppercase tracking-[0.2em] text-gray-400 border-b border-gray-100 dark:border-gray-900 pb-2">Insights & Resources</h3>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-                <h4 class="text-sm font-bold text-blue-500 mb-4 uppercase tracking-wider">Books</h4>
-                <ul class="text-sm space-y-2 text-gray-600 dark:text-gray-400">
-                    <li>• Storytelling with Data (Cole Nussbaumer)</li>
-                    <li>• Factfulness (Hans Rosling)</li>
-                    <li>• Measure What Matters (John Doerr)</li>
-                </ul>
-            </div>
-            
-            <div>
-                <h4 class="text-sm font-bold text-emerald-500 mb-4 uppercase tracking-wider">Learning & Tech</h4>
-                <ul class="text-sm space-y-2 text-gray-600 dark:text-gray-400">
-                    <li>• Tableau Tim (YouTube)</li>
-                    <li>• Data Skeptic (Podcast)</li>
-                    <li>• Harvard Business Review</li>
-                </ul>
+        <div class="flex space-x-6 mb-8 text-xs font-bold tracking-widest uppercase">
+            <button onclick="showTab('books')" class="tab-btn text-blue-500 border-b-2 border-blue-500 pb-1" id="btn-books">Books</button>
+            <button onclick="showTab('channels')" class="tab-btn text-gray-400 hover:text-blue-500 pb-1 transition" id="btn-channels">YouTube</button>
+            <button onclick="showTab('podcasts')" class="tab-btn text-gray-400 hover:text-blue-500 pb-1 transition" id="btn-podcasts">Podcasts</button>
+        </div>
+
+        <div class="min-h-[150px]">
+            <div id="tab-books" class="tab-content grid md:grid-cols-2 gap-4">
+                <div class="p-4 border border-gray-100 dark:border-gray-800 rounded bg-gray-50/50 dark:bg-gray-900/30">
+                    <p class="font-bold text-sm">Storytelling with Data</p>
+                    <p class="text-xs text-gray-500">Cole Nussbaumer Knaflic</p>
+                </div>
+                <div class="p-4 border border-gray-100 dark:border-gray-800 rounded bg-gray-50/50 dark:bg-gray-900/30">
+                    <p class="font-bold text-sm">Measure What Matters</p>
+                    <p class="text-xs text-gray-500">John Doerr</p>
+                </div>
             </div>
 
-            <div>
-                <h4 class="text-sm font-bold text-indigo-500 mb-4 uppercase tracking-wider">Interests</h4>
-                <p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">
-                    Focado em liderança ágil [cite: 60, 86], automação de processos de negócios [cite: 7, 12] e o impacto da IA generativa no Business Intelligence moderno.
-                </p>
+            <div id="tab-channels" class="tab-content hidden grid md:grid-cols-2 gap-4">
+                <div class="p-4 border border-gray-100 dark:border-gray-800 rounded bg-gray-50/50 dark:bg-gray-900/30">
+                    <p class="font-bold text-sm">Tableau Tim</p>
+                    <p class="text-xs text-gray-500">Deep dives into Tableau features</p>
+                </div>
+                <div class="p-4 border border-gray-100 dark:border-gray-800 rounded bg-gray-50/50 dark:bg-gray-900/30">
+                    <p class="font-bold text-sm">Fireship</p>
+                    <p class="text-xs text-gray-500">High-intensity tech news & code</p>
+                </div>
+            </div>
+
+            <div id="tab-podcasts" class="tab-content hidden grid md:grid-cols-2 gap-4">
+                <div class="p-4 border border-gray-100 dark:border-gray-800 rounded bg-gray-50/50 dark:bg-gray-900/30">
+                    <p class="font-bold text-sm">Data Skeptic</p>
+                    <p class="text-xs text-gray-500">Scientific approach to data</p>
+                </div>
+                <div class="p-4 border border-gray-100 dark:border-gray-800 rounded bg-gray-50/50 dark:bg-gray-900/30">
+                    <p class="font-bold text-sm">HBR IdeaCast</p>
+                    <p class="text-xs text-gray-500">Leadership and management insights</p>
+                </div>
             </div>
         </div>
     </section>
