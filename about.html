@@ -40,24 +40,45 @@
             <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Em busca da extração perfeita. O único ETL que faço manualmente aos fins de semana.</p>
         </div>
 
-        <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 md:col-span-2 lg:col-span-1 hover:border-red-500 transition">
-            <span class="text-2xl block mb-4">🎵</span>
-            <h4 class="font-bold text-lg mb-4">Focus Playlist</h4>
-            
-            <div class="rounded-lg overflow-hidden border border-gray-100 dark:border-gray-800">
-                <iframe 
-                    width="100%" 
-                    height="180" 
-                    src="https://music.youtube.com/playlist?list=LRYRwzhv-toDXJOz-YQ-2GdUIMsa7G4yC69mE" 
-                    title="YouTube Music Player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <p class="text-[10px] text-gray-400 mt-2 text-center uppercase tracking-widest font-bold">Curated for deep work</p>
+        <div class="md:col-span-2 bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+    <div class="flex items-center justify-between mb-8">
+        <div>
+            <h4 class="font-bold text-xl text-gray-900 dark:text-white">Heavy Rotation</h4>
+            <p class="text-sm text-gray-500">Álbuns que definem meu workflow e criatividade.</p>
         </div>
+        <span class="text-2xl">🎧</span>
+    </div>
 
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        
+        <a href="LINK_DO_ALBUM_NO_YT_MUSIC" target="_blank" class="group block">
+            <div class="relative aspect-square overflow-hidden rounded-lg shadow-md mb-3">
+                <img src="assets/album-1.jpg" 
+                     alt="Album Name" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white text-xs font-bold uppercase tracking-tighter">Play on YT Music</span>
+                </div>
+            </div>
+            <p class="font-bold text-xs truncate dark:text-gray-200">Nome do Álbum</p>
+            <p class="text-[10px] text-gray-500 truncate">Nome da Banda</p>
+        </a>
+
+        <a href="LINK_DO_ALBUM_NO_YT_MUSIC" target="_blank" class="group block">
+            <div class="relative aspect-square overflow-hidden rounded-lg shadow-md mb-3">
+                <img src="assets/album-2.jpg" 
+                     alt="Album Name" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white text-xs font-bold uppercase tracking-tighter">Play</span>
+                </div>
+            </div>
+            <p class="font-bold text-xs truncate dark:text-gray-200">Dark Side of the Moon</p>
+            <p class="text-[10px] text-gray-500 truncate">Pink Floyd</p>
+        </a>
+
+        </div>
+</div>
     </div>
 </section>
 
